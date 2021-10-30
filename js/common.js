@@ -27,7 +27,7 @@ function setLastVisitedCookie(value){
     if(lastVisited.length == 6) {
         lastVisited.splice(0, 1);
     }
-    lastVisited.splice(0, 1);
+    //lastVisited.splice(0, 1);
     console.log(lastVisited);
     setCookie('lastVisited', lastVisited);
 }
