@@ -34,5 +34,5 @@ function setLastVisitedCookie(value){
 
 function handleCardClick(value){
   setLastVisitedCookie(value);
-  window.location.href = `/cmpe272.me/pdp.php?id=${value}`;
+  window.location.href = `/pdp.php?id=${value}`;
 }
