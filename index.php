@@ -1,3 +1,10 @@
+<?php 
+require_once 'db.php';
+
+$query1="SELECT * FROM product";
+$products = $mysqli->query($query1);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -38,10 +45,10 @@
 	<div class="header_section">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-sm-2">
 					<div class="logo"><a href="#"><img src="images/logo.png"></a></div>
 				</div>
-				<div class="col-sm-9">
+				<div class="col-sm-8">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -52,6 +59,7 @@
                            <a class="nav-item nav-link" href="collection.php">Collection</a>
                            <a class="nav-item nav-link" href="shoes.php">Shoes</a>
                            <a class="nav-item nav-link" href="racing boots.php">Racing Boots</a>
+						   <a class="nav-item nav-link" href="lastVisited.php">Last visited</a>
                            <a class="nav-item nav-link" href="login.php">Login</a>
                            <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
                            <a class="nav-item nav-link last" href="contact.php"><img src="images/shop_icon.png"></a>
@@ -246,128 +254,27 @@
     <div class="layout_padding gallery_section">
     	<div class="container">
     		<div class="row">
-    			<div class="col-sm-4">
+			<?php while($product = $products->fetch_row()) {?>
+				<div class="col-sm-4" onclick="handleCardClick(<?php echo $product[0]?>)">
     				<div class="best_shoes">
-    					<p class="best_text">Best Shoes </p>
-    					<div class="shoes_icon"><img src="images/shoes-img4.png"></div>
+    					<p class="best_text"><?php echo $product[1]?> </p>
+    					<div class="shoes_icon"><img src=<?php echo $product[4]?>></div>
     					<div class="star_text">
     						<div class="left_part">
     							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
+									<?php for($i = 0; $i < $product[3]; $i++) {?> 
+										<li><a href="#"><img src="images/star-icon.png"></a></li>	
+									<?php }?>
     	    					</ul>
     						</div>
     						<div class="right_part">
-    							<div class="shoes_price">$ <span style="color: #ff4e5b;">60</span></div>
+    							<div class="shoes_price">$ <span style="color: #ff4e5b;"><?php echo $product[2]?></span></div>
     						</div>
     					</div>
     				</div>
     			</div>
-    			<div class="col-sm-4">
-    				<div class="best_shoes">
-    					<p class="best_text">Best Shoes </p>
-    					<div class="shoes_icon"><img src="images/shoes-img5.png"></div>
-    					<div class="star_text">
-    						<div class="left_part">
-    							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    					</ul>
-    						</div>
-    						<div class="right_part">
-    							<div class="shoes_price">$ <span style="color: #ff4e5b;">400</span></div>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm-4">
-    				<div class="best_shoes">
-    					<p class="best_text">Best Shoes </p>
-    					<div class="shoes_icon"><img src="images/shoes-img6.png"></div>
-    					<div class="star_text">
-    						<div class="left_part">
-    							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    					</ul>
-    						</div>
-    						<div class="right_part">
-    							<div class="shoes_price">$ <span style="color: #ff4e5b;">50</span></div>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    		<div class="row">
-    			<div class="col-sm-4">
-    				<div class="best_shoes">
-    					<p class="best_text">Sports Shoes</p>
-    					<div class="shoes_icon"><img src="images/shoes-img7.png"></div>
-    					<div class="star_text">
-    						<div class="left_part">
-    							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    					</ul>
-    						</div>
-    						<div class="right_part">
-    							<div class="shoes_price">$ <span style="color: #ff4e5b;">70</span></div>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm-4">
-    				<div class="best_shoes">
-    					<p class="best_text">Sports Shoes</p>
-    					<div class="shoes_icon"><img src="images/shoes-img8.png"></div>
-    					<div class="star_text">
-    						<div class="left_part">
-    							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    					</ul>
-    						</div>
-    						<div class="right_part">
-    							<div class="shoes_price">$ <span style="color: #ff4e5b;">100</span></div>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm-4">
-    				<div class="best_shoes">
-    					<p class="best_text">Sports Shoes</p>
-    					<div class="shoes_icon"><img src="images/shoes-img9.png"></div>
-    					<div class="star_text">
-    						<div class="left_part">
-    							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    					</ul>
-    						</div>
-    						<div class="right_part">
-    							<div class="shoes_price">$ <span style="color: #ff4e5b;">90</span></div>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
+
+			<?php }?>
     		</div>
     		<div class="buy_now_bt">
     			<button class="buy_text">Buy Now</button>
@@ -516,6 +423,7 @@
       <script src="js/custom.js"></script>
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
+	  <script src="js/common.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
       <script>
          $(document).ready(function(){
