@@ -58,8 +58,6 @@ $products = $mysqli->query($query1);
                            <a class="nav-item nav-link" href="collection.php">Collection</a>
                            <a class="nav-item nav-link" href="shoes.php">Shoes</a>
                            <a class="nav-item nav-link" href="racing boots.php">Racing Boots</a>
-						   <a class="nav-item nav-link" href="lastVisited.php">Last visited</a>
-                           <a class="nav-item nav-link" href="login.php">Login</a>
                            <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
                            <a class="nav-item nav-link last" href="contact.php"><img src="images/shop_icon.png"></a>
                         </div>
@@ -96,7 +94,7 @@ $products = $mysqli->query($query1);
 							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
 							<!-- <p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
 							<button class="buy_bt">Buy Now</button>
-							<button class="more_bt">See More</button>
+							<button class="more_bt" onclick="location.href='shoes.php'">See More</button>
 						</div>
 					</div>
 					<div class="col-sm-5">
@@ -115,9 +113,9 @@ $products = $mysqli->query($query1);
 						<div class="banner_taital">
 							<h1 class="banner_text">New Running Shoes </h1>
 							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
-							<!-- <p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+						
 							<button class="buy_bt">Buy Now</button>
-							<button class="more_bt">See More</button>
+							<button class="more_bt" onclick="location.href='shoes.php'">See More</button>
 						</div>
 					</div>
 					<div class="col-sm-5">
@@ -136,9 +134,9 @@ $products = $mysqli->query($query1);
 						<div class="banner_taital">
 							<h1 class="banner_text">New Running Shoes </h1>
 							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
-							<!-- <p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+						
 							<button class="buy_bt">Buy Now</button>
-							<button class="more_bt">See More</button>
+							<button class="more_bt" onclick="location.href='shoes.php'">See More</button>
 						</div>
 					</div>
 					<div class="col-sm-5">
@@ -157,9 +155,9 @@ $products = $mysqli->query($query1);
 						<div class="banner_taital">
 							<h1 class="banner_text">New Running Shoes </h1>
 							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
-							<!-- <p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+						
 							<button class="buy_bt">Buy Now</button>
-							<button class="more_bt">See More</button>
+							<button class="more_bt" onclick="location.href='shoes.php'">See More</button>
 						</div>
 					</div>
 					<div class="col-sm-5">
@@ -179,7 +177,7 @@ $products = $mysqli->query($query1);
     <div class="layout_padding collection_section">
     	<div class="container">
     	    <h1 class="new_text"><strong>New  Collection</strong></h1>
-    	    <!-- <p class="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p> -->
+    	
     	    <div class="collection_section_2">
     	    	<div class="row">
     	    		<div class="col-md-6">
@@ -198,7 +196,7 @@ $products = $mysqli->query($query1);
     	    					</ul>
     	    				</div>
     	    			</div>
-    	    			<button class="seemore_bt">See More</button>
+    	    			<button class="seemore_bt" onclick="location.href='shoes.php'">See More</button>
     	    		</div>
     	    		<div class="col-md-6">
     	    			<div class="about-img2">
@@ -223,7 +221,7 @@ $products = $mysqli->query($query1);
     <div class="collection_section">
     	<div class="container">
     		<h1 class="new_text"><strong>Racing Boots</strong></h1>
-    	    <!-- <p class="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p> -->
+    	
     	</div>
     </div>
     <div class="collectipn_section_3 layuot_padding">
@@ -236,7 +234,7 @@ $products = $mysqli->query($query1);
     				<div class="col-md-4">
     					<div class="sale_text"><strong>Sale <br><span style="color: #0a0506;">JOGING</span> <br>SHOES</strong></div>
     					<div class="number_text"><strong>$ <span style="color: #0a0506">100</span></strong></div>
-    					<button class="seemore">See More</button>
+    					<button class="seemore" onclick="location.href='shoes.php'">See More</button>
     				</div>
     			</div>
     		</div>
@@ -245,7 +243,7 @@ $products = $mysqli->query($query1);
     <div class="collection_section layout_padding">
     	<div class="container">
     		<h1 class="new_text"><strong>New Arrivals Products</strong></h1>
-    	    <!-- <p class="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p> -->
+    	
     	</div>
     </div>
 	<!-- new collection section end -->
@@ -304,7 +302,7 @@ $products = $mysqli->query($query1);
                             </div>
                             
                             <div class="form-group">
-                                <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                                <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Massage"></textarea>
                             </div>
                           </form>   
                        </div> 

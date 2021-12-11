@@ -85,7 +85,7 @@
     	    					</ul>
     	    				</div>
     	    			</div>
-    	    			<button class="seemore_bt">See More</button>
+    	    			<button class="seemore_bt" onclick="location.href='shoes.php'" >See More</button>
     	    		</div>
     	    		<div class="col-md-6">
     	    			<div class="about-img2">

@@ -43,6 +43,7 @@
 				</div>
 				<div class="col-sm-9">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
@@ -86,7 +87,7 @@
                             </div>
                             
                             <div class="form-group">
-                                <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                                <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Massage"></textarea>
                             </div>
                           </form>   
                        </div> 

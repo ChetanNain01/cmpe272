@@ -1,3 +1,10 @@
+<?php 
+require_once 'db.php';
+$query1="SELECT * FROM product";
+$products = $mysqli->query($query1);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -69,7 +76,7 @@
     		<h1 class="new_text"><strong>New Arrivals Products</strong></h1>
     	</div>
     </div>
-    <div class="layout_padding gallery_section">
+    <!-- <div class="layout_padding gallery_section">
     	<div class="container">
     		<div class="row">
     			<div class="col-sm-4">
@@ -194,6 +201,36 @@
     					</div>
     				</div>
     			</div>
+    		</div>
+    		<div class="buy_now_bt">
+    			<button class="buy_text">Buy Now</button>
+    		</div>
+    	</div>
+    </div> -->
+	<div class="layout_padding gallery_section">
+    	<div class="container">
+    		<div class="row">
+			<?php while($product = $products->fetch_row()) {?>
+				<div class="col-sm-4" onclick="handleCardClick(<?php echo $product[0]?>, '<?php echo $product[1] ?>', '<?php echo $product[4] ?>')">
+    				<div class="best_shoes">
+    					<p class="best_text"><?php echo $product[1]?> </p>
+    					<div class="shoes_icon"><img src=<?php echo $product[4]?>></div>
+    					<div class="star_text">
+    						<div class="left_part">
+    							<ul>
+									<?php for($i = 0; $i < $product[3]; $i++) {?> 
+										<li><a href="#"><img src="images/star-icon.png"></a></li>	
+									<?php }?>
+    	    					</ul>
+    						</div>
+    						<div class="right_part">
+    							<div class="shoes_price">$ <span style="color: #ff4e5b;"><?php echo $product[2]?></span></div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+
+			<?php }?>
     		</div>
     		<div class="buy_now_bt">
     			<button class="buy_text">Buy Now</button>
@@ -330,5 +367,7 @@ $('#myCarousel').carousel({
             });
         });
       </script> 
+	  <script src="js/common.js"></script>
    </body>
+   
 </html>
