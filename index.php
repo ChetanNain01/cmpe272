@@ -1,4 +1,4 @@
-<?php 
+<?php    
 require_once 'db.php';
 
 $query1="SELECT * FROM product";
