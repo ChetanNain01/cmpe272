@@ -44,7 +44,7 @@ $products = $mysqli->query($query1);
 	<div class="header_section">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-2">
+				<div class="col-sm-4">
 					<div class="logo"><a href="#"><img src="images/logo.png"></a></div>
 				</div>
 				<div class="col-sm-8">
@@ -58,8 +58,6 @@ $products = $mysqli->query($query1);
                            <a class="nav-item nav-link" href="collection.php">Collection</a>
                            <a class="nav-item nav-link" href="shoes.php">Shoes</a>
                            <a class="nav-item nav-link" href="racing boots.php">Racing Boots</a>
-                           <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
-                           <a class="nav-item nav-link last" href="contact.php"><img src="images/shop_icon.png"></a>
                         </div>
                     </div>
                     </nav>
@@ -84,84 +82,84 @@ $products = $mysqli->query($query1);
                 <div class="carousel-item active">
                     <div class="row">
 					<div class="col-sm-2 padding_0">
-						<p class="mens_taital">Men Shoes</p>
-						<div class="page_no">0/2</div>
-						<p class="mens_taital_2">Men Shoes</p>
+						<!-- <p class="mens_taital">Men Shoes</p> -->
+						<div class="page_no">1/4</div>
+						<!-- <p class="mens_taital_2">Men Shoes</p> -->
 					</div>
 					<div class="col-sm-5">
 						<div class="banner_taital">
 							<h1 class="banner_text">New Running Shoes </h1>
-							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
+							<h1 class="mens_text"><strong>Reebok Pump</strong></h1><br>
 							<!-- <p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
 							<button class="buy_bt">Buy Now</button>
 							<button class="more_bt" onclick="location.href='shoes.php'">See More</button>
 						</div>
 					</div>
 					<div class="col-sm-5">
-						<div class="shoes_img"><img src="images/running-shoes.png"></div>
+						<div class="shoes_img"><img src="images/try3.png.png"></div>
 					</div>
 				</div>
                 </div>
                 <div class="carousel-item">
                     <div class="row">
 					<div class="col-sm-2 padding_0">
-						<p class="mens_taital">Men Shoes</p>
-						<div class="page_no">0/2</div>
-						<p class="mens_taital_2">Men Shoes</p>
+						<!-- <p class="mens_taital">Men Shoes</p> -->
+						<div class="page_no">2/4</div>
+						<!-- <p class="mens_taital_2">Men Shoes</p> -->
 					</div>
 					<div class="col-sm-5">
 						<div class="banner_taital">
 							<h1 class="banner_text">New Running Shoes </h1>
-							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
+							<h1 class="mens_text"><strong>Nike Air Jordan</strong></h1>
 						
 							<button class="buy_bt">Buy Now</button>
 							<button class="more_bt" onclick="location.href='shoes.php'">See More</button>
 						</div>
 					</div>
 					<div class="col-sm-5">
-						<div class="shoes_img"><img src="images/running-shoes.png"></div>
+						<div class="shoes_img"><img src="images/NikeairJordan.png"></div>
 					</div>
 				</div>
                 </div>
                 <div class="carousel-item">
                     <div class="row">
 					<div class="col-sm-2 padding_0">
-						<p class="mens_taital">Men Shoes</p>
-						<div class="page_no">0/2</div>
-						<p class="mens_taital_2">Men Shoes</p>
+						<!-- <p class="mens_taital">Men Shoes</p> -->
+						<div class="page_no">3/4</div>
+						<!-- <p class="mens_taital_2">Men Shoes</p> -->
 					</div>
 					<div class="col-sm-5">
 						<div class="banner_taital">
 							<h1 class="banner_text">New Running Shoes </h1>
-							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
+							<h1 class="mens_text"><strong>Nike Air Max</strong></h1>
 						
 							<button class="buy_bt">Buy Now</button>
 							<button class="more_bt" onclick="location.href='shoes.php'">See More</button>
 						</div>
 					</div>
 					<div class="col-sm-5">
-						<div class="shoes_img"><img src="images/running-shoes.png"></div>
+						<div class="shoes_img"><img src="images/airmax.png"></div>
 					</div>
 				</div>
                 </div>
                 <div class="carousel-item">
                     <div class="row">
 					<div class="col-sm-2 padding_0">
-						<p class="mens_taital">Men Shoes</p>
-						<div class="page_no">0/2</div>
-						<p class="mens_taital_2">Men Shoes</p>
+						<!-- <p class="mens_taital">Men Shoes</p> -->
+						<div class="page_no">4/4</div>
+						<!-- <p class="mens_taital_2">Men Shoes</p> -->
 					</div>
 					<div class="col-sm-5">
 						<div class="banner_taital">
 							<h1 class="banner_text">New Running Shoes </h1>
-							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
+							<h1 class="mens_text"><strong>Adidas Crazy 8</strong></h1>
 						
 							<button class="buy_bt">Buy Now</button>
 							<button class="more_bt" onclick="location.href='shoes.php'">See More</button>
 						</div>
 					</div>
 					<div class="col-sm-5">
-						<div class="shoes_img"><img src="images/running-shoes.png"></div>
+						<div class="shoes_img"><img src="images/crazy8.png.png"></div>
 					</div>
 				</div>
                 </div>
@@ -255,7 +253,7 @@ $products = $mysqli->query($query1);
 				<div class="col-sm-4" onclick="handleCardClick(<?php echo $product[0]?>, '<?php echo $product[1] ?>', '<?php echo $product[4] ?>')">
     				<div class="best_shoes">
     					<p class="best_text"><?php echo $product[1]?> </p>
-    					<div class="shoes_icon"><img src=<?php echo $product[4]?>></div>
+    					<div class="shoes_icon"><img class="shoe_image" src=<?php echo $product[4]?>></div>
     					<div class="star_text">
     						<div class="left_part">
     							<ul>
@@ -273,9 +271,9 @@ $products = $mysqli->query($query1);
 
 			<?php }?>
     		</div>
-    		<div class="buy_now_bt">
+    		<!-- <div class="buy_now_bt">
     			<button class="buy_text">Buy Now</button>
-    		</div>
+    		</div> -->
     	</div>
     </div>
    	<!-- New Arrivals section end -->
