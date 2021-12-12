@@ -1,171 +1,200 @@
 <?php include('header.php') ?>
-<?php
-require_once 'php/db.php';
-session_start();
-$domains = array('Pullo', 'Pullo', 'Pullo', 'Pullo');
-$query1 = "SELECT *, count(*) as count FROM review where domain='$domains[0]' group by productName order by count desc limit 5";
-$result1 = $mysqli->query($query1);
+<?php 
+  require_once 'php/db.php';
+  session_start();
+  $query0 = "SELECT *, count(*) as count FROM review group by productName order by count desc limit 5";
+  $result0 = $mysqli -> query($query0);
 
-$query2 = "SELECT *, count(*) as count FROM review where domain='$domains[1]' group by productName order by count desc limit 5";
-$result2 = $mysqli->query($query2);
+  $domains = array('Pullo', 'Sixteen-Clothing', 'Fitness', 'Modernhomes');
+  $query1 = "SELECT *, count(*) as count FROM review where domain='$domains[0]' group by productName order by count desc limit 5";
+  $result1 = $mysqli -> query($query1);
 
-$query3 = "SELECT *, count(*) as count FROM review  where domain='$domains[2]' group by productName order by count desc limit 5";
-$result3 = $mysqli->query($query3);
+  $query2 = "SELECT *, count(*) as count FROM review where domain='$domains[1]' group by productName order by count desc limit 5";
+  $result2 = $mysqli -> query($query2);
 
-$query4 = "SELECT *, count(*) as count FROM review  where domain='$domains[3]' group by productName order by count desc limit 5";
-$result4 = $mysqli->query($query4);
+  $query3 = "SELECT *, count(*) as count FROM review  where domain='$domains[2]' group by productName order by count desc limit 5";
+  $result3 = $mysqli -> query($query3);
+
+  $query4 = "SELECT *, count(*) as count FROM review  where domain='$domains[3]' group by productName order by count desc limit 5";
+  $result4 = $mysqli -> query($query4);
 ?>
 
-<center>
-  <h2 style="color: #777">Highly Reviewed</h2>
-</center>
+<center><h2 style="color: #777">Highly Reviewed</h2></center>
 <div class="wrapper center-block">
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default">
-      <div class="panel-heading active" role="tab" id="headingOne">
-        <h4 class="panel-title">
-          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Top 5 highly reviewed items from <?php echo $domains[0] ?>
-          </a>
-        </h4>
-      </div>
-      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-        <div class="panel-body d-sm-flex">
-          <?php while ($row = $result1->fetch_row()) { ?>
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="<?php echo $row[5] ?>" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text"><?php echo $row[3] ?></p>
-                <a href="<?php echo $row[6] ?>" class="btn btn-primary">View Product</a>
-                <p class="card-text"> No. of Reviews <?php echo $row[7] ?>
-                </p>
-              </div>
-            </div>
-          <?php } ?>
+  <div class="panel panel-default">
+    <div class="panel-heading active" role="tab" id="headingZero">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+          Top 5 Overall highly reviewed items
+        </a>
+      </h4>
+    </div>
+    <div id="collapseZero" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingZero">
+      <div class="panel-body d-sm-flex">  
+      <?php while($row = $result0->fetch_row()) {?>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<?php echo $row[5]?>" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"><?php echo $row[3]?></p>
+            <a href="<?php echo $row[6] ?>" class="btn btn-primary">View Product</a> 
+            <p class="card-text"> No. of Reviews <?php echo $row[8] ?>
+          </p>
+          </div>
         </div>
+      <?php }?>
       </div>
     </div>
   </div>
 </div>
-
-
-<div class="wrapper center-block">
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default">
-      <div class="panel-heading active" role="tab" id="headingTwo">
-        <h4 class="panel-title">
-          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            Top 5 highly reviewed items from <?php echo $domains[1] ?>
-          </a>
-        </h4>
-      </div>
-      <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-        <div class="panel-body d-sm-flex">
-          <?php while ($row = $result2->fetch_row()) { ?>
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="<?php echo $row[5] ?>" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text"><?php echo $row[3] ?></p>
-                <a href="<?php echo $row[6] ?>" class="btn btn-primary">View Product</a>
-                <p class="card-text"> <?php echo $row[2] ?>
-                  <?php for ($i = 0; $i < $row[2]; $i++) { ?>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                    </svg>
-                  <?php } ?>
-                </p>
-              </div>
-            </div>
-          <?php } ?>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-
 <div class="wrapper center-block">
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default">
-      <div class="panel-heading active" role="tab" id="headingThree">
-        <h4 class="panel-title">
-          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-            Top 5 highly reviewed items from <?php echo $domains[2] ?>
-          </a>
-        </h4>
-      </div>
-      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
-        <div class="panel-body d-sm-flex">
-          <?php while ($row = $result3->fetch_row()) { ?>
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="<?php echo $row[5] ?>" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text"><?php echo $row[3] ?></p>
-                <a href="<?php echo $row[6] ?>" class="btn btn-primary">View Product</a>
-                <p class="card-text"> <?php echo $row[2] ?>
-                  <?php for ($i = 0; $i < $row[2]; $i++) { ?>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                    </svg>
-                  <?php } ?>
-                </p>
-              </div>
-            </div>
-          <?php } ?>
+  <div class="panel panel-default">
+    <div class="panel-heading active" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Top 5 highly reviewed items from <?php echo $domains[0]?>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body d-sm-flex">  
+      <?php while($row = $result1->fetch_row()) {?>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<?php echo $row[5]?>" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"><?php echo $row[3]?></p>
+            <a href="<?php echo $row[6] ?>" class="btn btn-primary">View Product</a> 
+            <p class="card-text"> No. of Reviews <?php echo $row[7] ?>
+          </p>
+          </div>
         </div>
+      <?php }?>
       </div>
     </div>
   </div>
 </div>
 </div>
 
+
 <div class="wrapper center-block">
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default">
-      <div class="panel-heading active" role="tab" id="headingFour">
-        <h4 class="panel-title">
-          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-            Top 5 highly reviewed items from <?php echo $domains[3] ?>
-          </a>
-        </h4>
-      </div>
-      <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
-        <div class="panel-body d-sm-flex">
-          <?php while ($row = $result4->fetch_row()) { ?>
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="<?php echo $row[5] ?>" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text"><?php echo $row[3] ?></p>
-                <a href="<?php echo $row[6] ?>" class="btn btn-primary">View Product</a>
-                <p class="card-text"> <?php echo $row[2] ?>
-                  <?php for ($i = 0; $i < $row[2]; $i++) { ?>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                    </svg>
-                  <?php } ?>
-                </p>
-              </div>
-            </div>
-          <?php } ?>
+  <div class="panel panel-default">
+    <div class="panel-heading active" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        Top 5 highly reviewed items from <?php echo $domains[1]?>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body d-sm-flex">
+      <?php while($row = $result2->fetch_row()) {?>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<?php echo $row[5]?>" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"><?php echo $row[3]?></p>
+            <a href="<?php echo $row[6] ?>" class="btn btn-primary">View Product</a>
+            <p class="card-text"> <?php echo $row[2] ?> 
+             <?php for($i = 0; $i < $row[2]; $i++) {?>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <?php }?> 
+          </p>
+          </div>
         </div>
-      </div>
+      <?php }?>
     </div>
   </div>
+</div>
+</div>
+</div>
+
+<div class="wrapper center-block">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading active" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+        Top 5 highly reviewed items from <?php echo $domains[2]?>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body d-sm-flex">
+      <?php while($row = $result3->fetch_row()) {?>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<?php echo $row[5]?>" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"><?php echo $row[3]?></p>
+            <a href="<?php echo $row[6] ?>" class="btn btn-primary">View Product</a>
+            <p class="card-text"> <?php echo $row[2] ?> 
+             <?php for($i = 0; $i < $row[2]; $i++) {?>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <?php }?> 
+          </p>
+          </div>
+        </div>
+      <?php }?>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="wrapper center-block">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading active" role="tab" id="headingFour">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+        Top 5 highly reviewed items from <?php echo $domains[3]?>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body d-sm-flex">
+      <?php while($row = $result4->fetch_row()) {?>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<?php echo $row[5]?>" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"><?php echo $row[3]?></p>
+            <a href="<?php echo $row[6] ?>" class="btn btn-primary">View Product</a>
+            <p class="card-text"> <?php echo $row[2] ?> 
+             <?php for($i = 0; $i < $row[2]; $i++) {?>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <?php }?> 
+          </p>
+          </div>
+        </div>
+      <?php }?>
+    </div>
+  </div>
+</div>
+</div>
 
 
+      
+<script>
+   $('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+  });
 
-  <script>
-    $('.panel-collapse').on('show.bs.collapse', function() {
-      $(this).siblings('.panel-heading').addClass('active');
-    });
-
-    $('.panel-collapse').on('hide.bs.collapse', function() {
-      $(this).siblings('.panel-heading').removeClass('active');
-    });
-  </script>
-  </body>
-
-  </html>
+  $('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
+  });
+</script>
+</body>
+</html>
