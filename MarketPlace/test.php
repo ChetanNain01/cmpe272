@@ -1,9 +1,11 @@
-<?php 
+<?php
 
 ?>
 
 <html>
-    <body onload="getConfig()">
+
+<body onload="getConfig()">
     <script src="js/config.js"></script>
-    </body>
+</body>
+
 </html>
