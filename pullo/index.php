@@ -58,7 +58,7 @@ $products = $mysqli->query($query1);
                            <a class="nav-item nav-link" href="collection.php">Collection</a>
                            <a class="nav-item nav-link" href="shoes.php">Shoes</a>
                            <a class="nav-item nav-link" href="racing boots.php">Racing Boots</a>
-						   <a class="nav-item nav-link" href="contact.php">Contact</a>
+						   <a class="nav-item nav-link" href="https://rs1215.me/MarketPlace/home.php">Market</a>
                         </div>
                     </div>
                     </nav>
