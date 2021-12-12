@@ -79,7 +79,7 @@ $product = $products->fetch_row();
     	    		<div class="d-sm-flex justify-content-between m-3">
     	    			<div class="about-img">
     	    				<button class="new_bt">New</button>
-    	    				<div class="shoes-img"><img src=<?php echo $product[4]?>></div>
+    	    				<div class="shoes-img"><img class="shoe_image_personal" src=<?php echo $product[4]?>></div>
     	    				<p class="sport_text" style="width:40%"><?php echo $product[1]?></p>
     	    				<div class="dolar_text">$<strong style="color: #f12a47;"><?php echo $product[2]?></strong> </div>
     	    				<div class="star_icon">
@@ -99,7 +99,7 @@ $product = $products->fetch_row();
 							<option>4</option>
 							<option>5</option>
 						</select>
-						<textarea id='providedReview' placeholder="Review...." rows="5" cols="50"></textarea>
+						<textarea id='providedReview' placeholder="Please write your review here..." rows="5" cols="50"></textarea>
 						<button class="seemore_bt" onclick="handleReview('<?php echo $product[1]?>', '<?php echo $product[4]?>')">Submit</button>
 					</div>
     	    		</div>
@@ -150,7 +150,7 @@ $product = $products->fetch_row();
     		        </div>
     		        <div class="col-sm-4 col-lg-2">
     		        	<h2 class="shop_text">Address </h2>
-    		        	<div class="image-icon"><img src="images/map-icon.png"><span class="pet_text">No 40 Baria Sreet 15/2 NewYork City, NY, United States.</span></div>
+    		        	<div class="image-icon"><img src="images/map-icon.png"><span class="pet_text">San Jose State University, San Jose, CA, USA.</span></div>
     		        </div>
     		        <div class="col-sm-4 col-md-6 col-lg-3">
     				    <h2 class="shop_text">Our Company </h2>
