@@ -66,8 +66,8 @@ if(isset($_COOKIE['lastVisited'])){
                            <a class="nav-item nav-link" href="racing boots.php">Racing Boots</a>
 						   <a class="nav-item nav-link" href="lastVisited.php">Last visited</a>
                            <a class="nav-item nav-link" href="contact.php">Contact</a>
-                           <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
-                           <a class="nav-item nav-link last" href="contact.php"><img src="images/shop_icon.png"></a>
+                           <!-- <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
+                           <a class="nav-item nav-link last" href="contact.php"><img src="images/shop_icon.png"></a> -->
                         </div>
                     </div>
                     </nav>

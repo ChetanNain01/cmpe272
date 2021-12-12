@@ -53,8 +53,8 @@
                            <a class="nav-item nav-link" href="shoes.php">Shoes</a>
                            <a class="nav-item nav-link" href="racing boots.php">Racing Boots</a>
                            <a class="nav-item nav-link" href="contact.php">Contact</a>
-                           <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
-                           <a class="nav-item nav-link last" href="contact.php"><img src="images/shop_icon.png"></a>
+                           <!-- <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
+                           <a class="nav-item nav-link last" href="contact.php"><img src="images/shop_icon.png"></a> -->
                         </div>
                     </div>
                     </nav>
@@ -72,9 +72,9 @@
     	    		<div class="col-md-6">
     	    			<div class="about-img">
     	    				<button class="new_bt">New</button>
-    	    				<div class="shoes-img"><img src="images/shoes-img1.png"></div>
-    	    				<p class="sport_text">Men Sports</p>
-    	    				<div class="dolar_text">$<strong style="color: #f12a47;">90</strong> </div>
+    	    				<div class="shoes-img"><img src="images/jordon1.jpg"></div>
+    	    				<p class="sport_text">Jordon Air</p>
+    	    				<div class="dolar_text">$<strong style="color: #f12a47;">150</strong> </div>
     	    				<div class="star_icon">
     	    					<ul>
     	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
@@ -85,13 +85,13 @@
     	    					</ul>
     	    				</div>
     	    			</div>
-    	    			<button class="seemore_bt" onclick="location.href='shoes.php'" >See More</button>
+    	    			<button class="seemore_bt" onclick="location.href='shoes.php'">See More</button>
     	    		</div>
     	    		<div class="col-md-6">
     	    			<div class="about-img2">
-    	    				<div class="shoes-img2"><img src="images/shoes-img2.png"></div>
-    	    				<p class="sport_text">Men Sports</p>
-    	    				<div class="dolar_text">$<strong style="color: #f12a47;">90</strong> </div>
+    	    				<div class="shoes-img2"><img src="images/jordon2.jpg"></div>
+    	    				<p class="sport_text">Jordon Air Max</p>
+    	    				<div class="dolar_text">$<strong style="color: #f12a47;">170</strong> </div>
     	    				<div class="star_icon">
     	    					<ul>
     	    						<li><a href="#"><img src="images/star-icon.png"></a></li>

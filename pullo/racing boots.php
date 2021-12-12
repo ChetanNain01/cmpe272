@@ -53,8 +53,8 @@
                            <a class="nav-item nav-link" href="shoes.php">Shoes</a>
                            <a class="nav-item nav-link" href="racing boots.php">Racing Boots</a>
                            <a class="nav-item nav-link" href="contact.php">Contact</a>
-                           <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
-                           <a class="nav-item nav-link last" href="contact.php"><img src="images/shop_icon.png"></a>
+                           <!-- <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
+                           <a class="nav-item nav-link last" href="contact.php"><img src="images/shop_icon.png"></a> -->
                         </div>
                     </div>
                     </nav>
@@ -71,17 +71,17 @@
     	    <!-- <p class="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p> -->
     	</div>
     </div>
-    <div class="collectipn_section_3 layout_padding">
+    <div class="collectipn_section_3 layuot_padding">
     	<div class="container">
     		<div class="racing_shoes">
     			<div class="row">
     				<div class="col-md-8">
-    					<div class="shoes-img3"><img src="images/shoes-img3.png"></div>
+    					<div class="shoes-img3"><img src="images/kob7.jpg"></div>
     				</div>
     				<div class="col-md-4">
     					<div class="sale_text"><strong>Sale <br><span style="color: #0a0506;">JOGING</span> <br>SHOES</strong></div>
-    					<div class="number_text"><strong>$ <span style="color: #0a0506">100</span></strong></div>
-    					<button class="seemore">See More</button>
+    					<div class="number_text"><strong>$ <span style="color: #0a0506">170</span></strong></div>
+    					<button class="seemore" onclick="location.href='shoes.php'">See More</button>
     				</div>
     			</div>
     		</div>

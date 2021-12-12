@@ -58,6 +58,7 @@ $products = $mysqli->query($query1);
                            <a class="nav-item nav-link" href="collection.php">Collection</a>
                            <a class="nav-item nav-link" href="shoes.php">Shoes</a>
                            <a class="nav-item nav-link" href="racing boots.php">Racing Boots</a>
+						   <a class="nav-item nav-link" href="contact.php">Contact</a>
                         </div>
                     </div>
                     </nav>
@@ -181,9 +182,9 @@ $products = $mysqli->query($query1);
     	    		<div class="col-md-6">
     	    			<div class="about-img">
     	    				<button class="new_bt">New</button>
-    	    				<div class="shoes-img"><img src="images/shoes-img1.png"></div>
-    	    				<p class="sport_text">Men Sports</p>
-    	    				<div class="dolar_text">$<strong style="color: #f12a47;">90</strong> </div>
+    	    				<div class="shoes-img"><img src="images/jordon1.jpg"></div>
+    	    				<p class="sport_text">Jordon Air</p>
+    	    				<div class="dolar_text">$<strong style="color: #f12a47;">150</strong> </div>
     	    				<div class="star_icon">
     	    					<ul>
     	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
@@ -198,9 +199,9 @@ $products = $mysqli->query($query1);
     	    		</div>
     	    		<div class="col-md-6">
     	    			<div class="about-img2">
-    	    				<div class="shoes-img2"><img src="images/shoes-img2.png"></div>
-    	    				<p class="sport_text">Men Sports</p>
-    	    				<div class="dolar_text">$<strong style="color: #f12a47;">90</strong> </div>
+    	    				<div class="shoes-img2"><img src="images/jordon2.jpg"></div>
+    	    				<p class="sport_text">Jordon Air Max</p>
+    	    				<div class="dolar_text">$<strong style="color: #f12a47;">170</strong> </div>
     	    				<div class="star_icon">
     	    					<ul>
     	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
@@ -227,11 +228,11 @@ $products = $mysqli->query($query1);
     		<div class="racing_shoes">
     			<div class="row">
     				<div class="col-md-8">
-    					<div class="shoes-img3"><img src="images/shoes-img3.png"></div>
+    					<div class="shoes-img3"><img src="images/kob7.jpg"></div>
     				</div>
     				<div class="col-md-4">
     					<div class="sale_text"><strong>Sale <br><span style="color: #0a0506;">JOGING</span> <br>SHOES</strong></div>
-    					<div class="number_text"><strong>$ <span style="color: #0a0506">100</span></strong></div>
+    					<div class="number_text"><strong>$ <span style="color: #0a0506">170</span></strong></div>
     					<button class="seemore" onclick="location.href='shoes.php'">See More</button>
     				</div>
     			</div>
@@ -278,7 +279,7 @@ $products = $mysqli->query($query1);
     </div>
    	<!-- New Arrivals section end -->
    	<!-- contact section start -->
-    <div class="layout_padding contact_section">
+    <!-- <div class="layout_padding contact_section">
     	<div class="container">
     		<h1 class="new_text"><strong>Contact Now</strong></h1>
     	</div>
@@ -319,7 +320,7 @@ $products = $mysqli->query($query1);
     			</div>
     		</div>
     	</div>
-    </div>
+    </div> -->
    	<!-- contact section end -->
 	<!-- section footer start -->
     <div class="section_footer">
